@@ -19,20 +19,13 @@
       "name": "Vaibhavi",
       "age": 21,
       "designetation": "Programmer-Analyst",
-      "joiningDate": "2019-01-01"
+      "joiningDate": "2019-01-04"
     },
     {
       "id": 4,
       "name": "Tina",
       "age": 24,
       "designetation": "Project-Lead",
-      "joiningDate": "2019-01-01"
-    },
-    {
-      "id": 5,
-      "name": "Akshitaf",
-      "age": 24,
-      "designetation": "Project-Manager",
       "joiningDate": "2019-01-01"
     }
   ]

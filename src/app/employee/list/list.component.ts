@@ -1,5 +1,6 @@
 /**
  * @author -Ronak Patel.
+ * @description craete class for view data in server.
  */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -20,17 +21,17 @@ export class ListComponent implements OnInit {
 
   constructor(private service: EmployeeService, private router: Router) {
     this.employees = [];
+    this.getEmployees();
   }
 
   ngOnInit() {
-    this.getEmployees();
   }
   /**
    * @description this function call service and subscribe some data and store in employees
    */
   public getEmployees(): void {
 
-    this.service.getEmployees().subscribe(employees => {
+    this.service.getEmployees().subscribe((employees: Employee[]) => {
       this.employees = employees;
       this.employeeKeys = ['id', 'name', 'age', 'designetation', 'joining_Date'];
     });

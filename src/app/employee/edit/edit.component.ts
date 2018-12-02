@@ -1,5 +1,6 @@
 /**
  * @author -Ronak Patel.
+ * @description -create calss for edit record to server.
  */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -50,10 +51,10 @@ export class EditComponent implements OnInit {
    */
   public getEmployee(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.service.getEmployee(id).subscribe(employee => { this.loadDate(employee); });
+    this.service.getEmployee(id).subscribe((employee: Employee) => { this.loadDate(employee); });
   }
   // craete for edited data
   public onSubmit(): void {
-    this.service.updateEmployee(this.employeeForm.value).subscribe(() => {this.router.navigate(['employee/list']); });
+    this.service.updateEmployee(this.employeeForm.value).subscribe(() => { this.router.navigate(['employee/list']); });
   }
 }
