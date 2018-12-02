@@ -1,5 +1,6 @@
 /**
  * @author -Ronak Patel.
+ * @description this module is lazy loded.
  */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
