@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th *ngFor="let tableHeadingKey of header">
+      {{tableHeadingKey|uppercase}}</th>
+      <th colspan="2">ACTION </th>
+  </tr>
+  <tr *ngFor="let tableObjectValue of data">
+    <td *ngFor="let tableHeadingKey of tableKey">
+      {{tableObjectValue[tableHeadingKey]}}</td>
+      <td><button (click)="editRecord(tableObjectValue.id)">Edit</button></td>
+      <td><button (click)="deleteRecord(tableObjectValue.id)">Delete</button></td>
+</tr>
+</table>

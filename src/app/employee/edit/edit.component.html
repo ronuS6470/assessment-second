@@ -1,0 +1,10 @@
+<form [formGroup]="employeeForm" novalidate>
+  <label>Name:</label><input type="text" formControlName="name"><br>
+  <label>Age:</label><input type="text" formControlName="age"><br>
+  <label>Designetation:</label><input type="text" formControlName="designetation"><br>
+  <label>JoiningDate:</label><input type="text" formControlName="joiningDate"><br>
+
+  <button (click)="onSubmit(employeeForm.value)">Submit</button>
+</form>
+
+{{employeeForm.value |json}}
