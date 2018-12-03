@@ -1,6 +1,6 @@
 /**
  * @author Ronak Patel.
- * @description craete class for add data to server.
+ * @description create class for add data to server.
  */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -24,7 +24,7 @@ export class AddComponent implements OnInit {
   ngOnInit() {
     this.loadForm();
   }
-  // craete for reactive form
+  // create for reactive form
   public loadForm(): void {
     this.employeeForm = this.fb.group({
       name: ['', Validators.required],
@@ -33,7 +33,7 @@ export class AddComponent implements OnInit {
       joiningDate: ['', Validators.required]
     });
   }
-  // craete for edited data
+  // create for edited data
   public onSubmit(): void {
     this.service.addEmployee(this.employeeForm.value).subscribe(() => { this.route.navigate(['employee/list']); });
   }
