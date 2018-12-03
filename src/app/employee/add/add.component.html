@@ -4,5 +4,5 @@
   <label>Designetation:</label><input type="text" formControlName="designetation"><br>
   <label>JoiningDate:</label><input type="date" formControlName="joiningDate"><br>
 
-  <button (click)="onSubmit(employeeForm.value)">Submit</button>
+  <button (click)="onSubmit(employeeForm.value)" [disabled]="!employeeForm.valid">Submit</button>
 </form>
