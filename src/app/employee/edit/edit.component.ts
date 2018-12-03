@@ -26,7 +26,7 @@ export class EditComponent implements OnInit {
     this.loadForm();
     this.getEmployee();
   }
-  // craete for reactive form
+  // create for reactive form
   public loadForm(): void {
     this.employeeForm = this.fb.group({
       id: [''],
@@ -47,13 +47,13 @@ export class EditComponent implements OnInit {
     });
   }
   /**
-   * @description this method craete for get data using id
+   * @description this method create for get data using id
    */
   public getEmployee(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.service.getEmployee(id).subscribe((employee: Employee) => { this.loadDate(employee); });
   }
-  // craete for edited data
+  // create for edited data
   public onSubmit(): void {
     this.service.updateEmployee(this.employeeForm.value).subscribe(() => { this.router.navigate(['employee/list']); });
   }
